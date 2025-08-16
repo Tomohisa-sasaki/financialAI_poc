@@ -1,0 +1,31 @@
+# === J-Quants ===
+JQUANTS_API_BASE=https://api.jpx-jquants.com/v1
+JQUANTS_API_TOKEN=あなたの_J-Quants_トークン
+
+# === EDINET ===
+# EDINETは基本キー不要ですが、ベースURLを明示しておくと安全
+EDINET_API_BASE=https://disclosure.edinet-fsa.go.jp/api/v2
+
+# === OpenAI ===
+# OpenAI（本家）
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx
+OPENAI_BASE_URL=https://api.openai.com/v1
+OPENAI_MODEL=gpt-4o-mini   # 使っているモデル名に合わせて
+# （必要なら）OPENAI_ORG=org_xxxxxxxx
+
+# Azure OpenAI を使う場合はこちら（↑を使わず↓を使う）
+# AZURE_OPENAI_ENDPOINT=https://<your-resource>.openai.azure.com
+# AZURE_OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxx
+# AZURE_OPENAI_DEPLOYMENT=gpt-4o-mini  # デプロイ名
+# AZURE_OPENAI_API_VERSION=2024-02-15-preview
+
+# === メール送信（レポート送付で使用） ===
+MAIL_SERVER=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=example@gmail.com
+MAIL_PASSWORD=アプリパスワード等
+MAIL_FROM=reports@example.com
+
+# === 基本認証（フロント→Next API→バックエンドのプロキシで使用）===
+API_USER=admin
+API_PASSWORD=password123

@@ -1,0 +1,18 @@
+# 代表的な除外
+.venv/
+node_modules/
+.next/
+.env
+frontend/.env.local
+.history/
+*.log
+.DS_Store
+
+# データ/成果物は除外
+backend/data/raw/
+backend/data/processed/
+backend/data/warehouse/
+*.sqlite3
+*.zip
+*.xbrl
+*.xsd
