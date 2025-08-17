@@ -35,3 +35,11 @@ app.include_router(analysis_router)
 app.include_router(reports_router)
 app.include_router(companies_router)
 app.include_router(ai_router)
+
+# backend/apps/api/main.py
+from fastapi import FastAPI
+from backend.apps.api.edinet import router as edinet_router  # 追加
+
+app = FastAPI()
+app.include_router(edinet_router)  # 追加
+# 既存の include_router(...) はそのまま
