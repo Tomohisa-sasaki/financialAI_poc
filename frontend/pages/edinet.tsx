@@ -81,8 +81,14 @@ export default function EDINETPage() {
     if (!section) return []
     const rows: Row[] = []
     for (const c of candidates) {
-      const val = pickValue(section, c.patterns)
-      if (val != null) rows.push({ x: c.label, value: val })
+      let val = pickValue(section, c.patterns)
+      if (val != null) {
+        // 「％」表記の項目だけ、0–1 実数を 0–100 に補正
+        if (c.label.includes('%') && val <= 1) {
+          val = val * 100
+        }
+        rows.push({ x: c.label, value: val })
+      }
     }
     return rows
   }
